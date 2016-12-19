@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Post #<%=@post.id%></title>
+</head>
+<body>
+<h1>Existing Content</h1>
+Name: <%=@post.name%> <br>
+Content: <%=@post.content%>
+<h1>Edit Content</h1>
+<form action="/posts/<%= @post.id %>" method="post">
+  <input id="hidden" type="hidden" name="_method" value="patch">
+  <label for="post[name]">Name:</label><br>
+  <input name="post[name]" id="name"><br>
+  <label for="post[content]">Content:</label><br>
+  <input name=post[content] id="content"><br>
+  <button type="submit" name="submit" id="submit">Submit</button>
+</form>
+
+
+</body>
+</html>
